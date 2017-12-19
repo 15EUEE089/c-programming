@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(void);
+{
+int a=9,i,j,sum=0,b=0;
+for(i=0;i<=3;i++)
+{
+b+=(a*pow(10,i));
+sum+=b;
+}
+printf("%d",sum);
+return 0;
+}
+
