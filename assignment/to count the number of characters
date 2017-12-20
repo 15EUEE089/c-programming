@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(void)
+{
+char str[10];
+int i,j,count;
+printf("Enter the String\n");
+gets(str);
+for(i=0;i<strlen(str);i++)
+{
+count=1;
+if(str[i]=='+')
+continue;
+for(j=i+1;j<strlen(str);j++)
+{
+if(str[i]==str[j])
+{
+count++;
+str[j]='+';
+}
+}
+printf("%c occured %d times\n",str[i],count);
+}
+for(i=0;i<strlen(str);i++)
+printf("%c ",str[i]);
+return 0;
+}
