@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main(void)
+{
+char rom[10];
+int a[10],i,j,l,sum=0;
+printf("Enter the roman letter\n");
+gets(rom);
+l=strlen(rom);
+for(i=0;i<l;i++)
+{
+switch(rom[i])
+{
+case 'I':a[i]=1;
+	 break;
+case 'V':a[i]=5;
+	 break;
+case 'X':a[i]=10;
+	 break;
+}
+}
+sum=a[l-1];
+for(j=l-1;j>0;j--)
+{
+if(a[j]>a[j-1])
+{
+sum-=a[j-1];
+}
+else
+{
+sum+=a[j-1];
+}
+}
+printf("sum:%d",sum);
+return 0;
+}
