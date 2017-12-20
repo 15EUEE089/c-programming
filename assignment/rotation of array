@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(void)
+{
+int rot[]={10,20,30,40,50};
+int temp[5],n,i,j,k=0;
+int l=sizeof(rot)/sizeof(int);
+scanf("%d",&n);
+for(i=0;i<n;i++)
+temp[i]=rot[i];
+for(j=n;j<l;j++)
+{
+rot[j-n]=rot[j];
+}
+for(j=l-n;j<l;j++)
+{
+rot[j]=temp[k];
+k++;
+}
+for(i=0;i<l;i++)
+{
+printf("%d ",rot[i]);
+}
+return 0;
+}
