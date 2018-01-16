@@ -9,7 +9,7 @@ int main(void) {
 	}
 	else
 	{
-	a+=2;
+	a+=1;
 	}
 	for(i=a;i<b;i++)
 	if(i%2==0)
